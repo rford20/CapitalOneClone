@@ -1,0 +1,14 @@
+{
+  "name": "capital_one_clone",
+  "version": "1.0.0",
+  "description": "A Clone of Capital One Website",
+  "main": "server.js",
+  "scripts": {
+    "sass": "node-sass -w frontend/scss/ -o frontend/src/css/ --recursive"
+  },
+  "author": "Rob Ford",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
