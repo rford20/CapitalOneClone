@@ -1,0 +1,59 @@
+.menu-btn {
+    z-index: 3;
+    cursor: pointer;
+    @include easeOut;
+    align-items: center;
+    width: 28px;
+    .menu-bar {
+        width: 28px;
+        height: 1px;
+        margin: 0 0 8px 0;
+        background: $primary-color;
+        @include easeOut;
+    }
+
+    // rotate into X with menu lines
+    &.close {
+        transform: rotate(180deg);
+
+        .menu-bar {
+            // Line 1 - Rotate
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            // Line 2 - Hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            // Line 3 - Rotate
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(9px, -7px);
+            }
+        }
+    }
+}
+
+nav {
+    display: none;
+
+    @include easeOut;
+    &.show {
+        display: inline;
+    }
+
+    .nav-item a{
+        display: flex;
+        font-size: 1rem;
+        font-weight: normal;
+        text-decoration: none;
+        color: $medium-color;
+        border-bottom: 2px solid $light-color;
+        padding: 1rem;
+        margin: 0 2rem;
+        @include easeOut;
+
+        &:hover {
+            background: $light-color;
+        }
+    }
+}

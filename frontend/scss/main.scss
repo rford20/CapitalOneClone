@@ -1,5 +1,32 @@
-$primary-color: #444;
+@import 'config';
+@import 'menu';
 
-body {
-    background: $primary-color;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: white;
+    color: $primary-color;
+    height: 6.5vh;
+    border-bottom: 1px solid $medium-color;
+    align-items: center;
+    padding: 1rem;
+    display: flex;
+    
+
+    section {
+        flex: 1;
+    }
+
+    #logo-image {
+        width: 100px;
+    }
+
+    .sign-in {
+        width: 20px;
+        text-align: right;
+    }
 }
